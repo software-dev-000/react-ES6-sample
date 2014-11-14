@@ -1,6 +1,6 @@
 ﻿# ReactES6
 
-A web project for working with react js in es6
+A web project for working with react js in es6.
 uses gulp and browser-sync for frontend building, 6to5 for es6 support
 
 Install:
