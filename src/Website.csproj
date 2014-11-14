@@ -98,7 +98,8 @@
     <Content Include="scripts\.jshintignore" />
     <Content Include="scripts\.jshintrc" />
     <Content Include="scripts\vendor\react\react-0.12.0.js" />
-    <Content Include="scripts\website\components\jumbotron.jsx" />
+    <None Include="scripts\vendor\react\react-0.13.0-alpha.js.disabled" />
+    <Content Include="scripts\website\components\jumbotron.js" />
     <Content Include="views\layouts\_main.cshtml" />
     <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />

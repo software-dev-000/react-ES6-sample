@@ -20,7 +20,6 @@ var toES5 = require('gulp-6to5');
 var src = {
     css: 'content/css',
     webJs: 'scripts/website/**/*.js',
-    webJsx: 'scripts/website/**/*.jsx',
     vendorJs: 'scripts/vendor/**/*.js',
     karmaConfig: 'scripts/test/config/karma.conf.js',
     less: 'content/less/**/*.less',
@@ -60,11 +59,7 @@ gulp.task('js:vendor', function () {
 
 
 gulp.task('js:main', function () {
-    var jsxFilter = gulpFilter(['**/*.jsx']);
-    gulp.src([src.webJs, src.webJsx])
-        .pipe(jsxFilter)
-        .pipe(react())
-        .pipe(jsxFilter.restore())
+    gulp.src(src.webJs)
         .pipe(sourcemaps.init())
         .pipe(toES5())
         .pipe(concat('main.min.js'))
@@ -115,7 +110,7 @@ gulp.task('views:updated', function () {
 gulp.task('serve', ['less', 'js', 'browser-sync'], function () {
     gulp.watch(src.less, ['less']);
     gulp.watch(src.vendorJs, ['js:vendor']);
-    gulp.watch([src.webJs, src.webJsx], ['js:main']);
+    gulp.watch(src.webJs, ['js:main']);
     gulp.watch(src.views, ['views:updated']);
 });
 
