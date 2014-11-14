@@ -1,0 +1,55 @@
+﻿.sidebar {
+    position: fixed;
+    top: 350px;
+    right: 0;
+    padding: 24px 0 28px 30px;
+    transform: translate3d(100%,0,0);
+    transition: transform 0.5s ease-in-out;
+    z-index: 3;
+
+    border: 1px solid @btn-default-border;
+    border-right: none;
+
+    background: url("../images/brushed.png");
+
+    &.sidebar-open {
+        transform: translate3d(0,0,0);
+        background: fade(#eeeeee, 90%);
+    }
+
+    &-button {
+        position: absolute;
+        transform: translate3d(-100%,-50%,0);
+        left: 0;
+        top: 50%;
+        background: fade(#000, 85%);
+        padding: 6px 12px 8px 14px;
+        border-radius: 25px 0 0 25px;
+        border: 1px solid @btn-default-border;
+
+        &:after {
+            color: white;
+            content: "\00AB";
+            font-size: @font-size-h2;
+            display: inline;
+        }
+
+        .sidebar-open & {
+            &:after {
+                content: "\00BB";
+            }
+        }
+    }
+
+    @media (min-width: @screen-md-min) {
+        position: static;
+        transform: none;
+        padding: initial;
+        border: initial;
+        background: initial;
+
+        &-button {
+            display: none;
+        }
+    }
+}

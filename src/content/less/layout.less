@@ -1,0 +1,30 @@
+﻿@base-gutter: 20px;
+@nav-height: 50px;
+
+@primary-bg: rgba(255,255,255,0.8);
+@primary-box-shadow: 0 3px 5px rgba(0,0,0,.05);
+
+@container-padding-vertical: 22px;
+@container-padding-horisontal: 20px;
+
+body {
+    background: url("../images/brushed.png");
+    margin-top: @nav-height + @base-gutter;
+}
+
+h1, .h1, h2, .h2 {
+    font-weight: bold;
+}
+
+h3, .h3 {
+    font-size: @font-size-h3;
+    font-weight: normal;
+}
+
+.section {
+    padding: @container-padding-vertical @container-padding-horisontal;
+    background: @primary-bg;
+    margin-bottom: 60px;
+    position: relative;
+    box-shadow: @primary-box-shadow;
+}

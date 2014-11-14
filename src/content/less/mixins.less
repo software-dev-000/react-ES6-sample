@@ -1,0 +1,48 @@
+﻿.center-horisontal(){
+    left: 50%;
+    transform: translate3d(-50%,0,0);
+}
+
+.center-vertical(){
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+}
+
+.box-border(){
+    border-top: 2px solid @btn-default-border;
+    border-bottom: 2px solid @btn-default-border;
+    border-left: @border-normal;
+    border-right: @border-normal;
+}
+
+.box-border(){
+    border: @border-normal;
+}
+
+.box-border-thin(){
+    border: @border-thin;
+}
+
+.horisontal-gradient(@color-from: rgba(0,0,0,0), @color-to: rgba(0,0,0,0.2), @isLeft:false) when (@isLeft = true){
+    background: ~'-webkit-linear-gradient(right, @{color-from} 0%,@{color-to} 100%)'; /* Chrome10+,Safari5.1+ */
+    background: ~'-ms-linear-gradient(right, @{color-from} 0%,@{color-to} 100%)'; /* IE10+ */
+    background: ~'linear-gradient(to left, @{color-from} 0%,@{color-to} 100%)'; /* W3C */
+}
+
+.horisontal-gradient(@color-from: rgba(0,0,0,0), @color-to: rgba(0,0,0,0.2), @isLeft:false) {
+    background: ~'-webkit-linear-gradient(left, @{color-from} 0%,@{color-to} 100%)'; /* Chrome10+,Safari5.1+ */
+    background: ~'-ms-linear-gradient(left, @{color-from} 0%,@{color-to} 100%)'; /* IE10+ */
+    background: ~'linear-gradient(to right, @{color-from} 0%,@{color-to} 100%)'; /* W3C */
+}
+
+.vertical-gradient(@color-from: rgba(0,0,0,0), @color-to: rgba(0,0,0,0.2), @isDown:false) when (@isDown = true){
+    background: ~'-webkit-linear-gradient(top, @{color-from} 0%,@{color-to} 100%)'; /* Chrome10+,Safari5.1+ */
+    background: ~'-ms-linear-gradient(top, @{color-from} 0%,@{color-to} 100%)'; /* IE10+ */
+    background: ~'linear-gradient(to bottom, @{color-from} 0%,@{color-to} 1f00%)'; /* W3C */
+}
+
+.vertical-gradient(@color-from: rgba(0,0,0,0), @color-to: rgba(0,0,0,0.2), @isDown:false) {
+    background: ~'-webkit-linear-gradient(bottom, @{color-from} 0%,@{color-to} 100%)'; /* Chrome10+,Safari5.1+ */
+    background: ~'-ms-linear-gradient(bottom, @{color-from} 0%,@{color-to} 100%)'; /* IE10+ */
+    background: ~'linear-gradient(to top, @{color-from} 0%,@{color-to} 100%)'; /* W3C */
+}

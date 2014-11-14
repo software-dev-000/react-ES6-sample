@@ -1,0 +1,102 @@
+﻿@part-outline-stroke: rgba(55,55,55,0.5);
+@part-outline-stroke-hover: rgba(0,0,0,1);
+@part-outline-stroke-hover-width: 2px;
+
+.preview {
+    padding-bottom: 30px;
+
+    svg {
+        width: 100%;
+    }
+
+    .bike-svg {
+        background: white;
+        .box-border-thin();
+    }
+
+    margin-bottom: 1px;
+
+    g {
+        &.active > line {
+            stroke-dasharray: 5px !important;
+            stroke-dashoffset: 0 !important;
+            -webkit-animation: dashactive 2000ms linear forwards infinite !important;
+            animation: dashactive 2000ms linear forwards infinite !important;
+        }
+
+        &.has-color > line {
+            stroke-dashoffset: 0 !important;
+        }
+    }
+
+    path {
+        fill: #ffffff;
+    }
+
+    path, line {
+        stroke: @part-outline-stroke;
+
+        &.active {
+            stroke-dasharray: 5px !important;
+            stroke-dashoffset: 0 !important;
+            -webkit-animation: dashactive 2000ms linear forwards infinite !important;
+            animation: dashactive 2000ms linear forwards infinite !important;
+        }
+
+        &.has-color {
+            stroke-dashoffset: 0 !important;
+        }
+    }
+}
+
+@-webkit-keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes dashactive {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+
+@keyframes dashactive {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+
+@-webkit-keyframes rotate360 {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}

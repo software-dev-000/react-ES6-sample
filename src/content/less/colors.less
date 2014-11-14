@@ -1,0 +1,30 @@
+﻿@blue: blue;
+@blurple: #263881;
+@orange: #bd7228;
+@yellow: #bd9025;
+@darkgrey: #080808;
+@turqoise: #1a6276;
+@red: red;
+@green: green;
+@transparent: transparent;
+
+@colors: 'transparent','blurple', 'orange','yellow','darkgrey', 'turqoise', 'blue', 'red', 'green';
+
+.do-make-colors(@i) when (@i > 0) {
+    @color: extract(@colors, @i);
+    @sel: ~'.@{color}';
+
+    @{sel} {
+        & {
+            fill: @@color;
+        }
+
+        g& line {
+            stroke: @@color;
+        }
+    }
+
+    .do-make-colors((@i - 1));
+}
+
+.do-make-colors(length(@colors));

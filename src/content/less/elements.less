@@ -1,0 +1,72 @@
+﻿.scroll-push {
+    display: none;
+
+    -moz-transition: height 0.3s linear;
+    -o-transition: height 0.3s linear;
+    -webkit-transition: height 0.3s linear;
+    transition: height 0.3s linear;
+
+    @media (min-width: @screen-md-min) { 
+        display: block;
+    }
+}
+
+.variant-picker {
+    background: white;
+    position: relative;
+
+    padding: @container-padding-vertical 0;
+
+    .box-border-thin();
+
+    .images-stack {
+        position: relative;
+    }
+
+    .variant-image {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        -moz-transition: opacity 0.5s ease-in;
+        -o-transition: opacity 0.5s ease-in;
+        -webkit-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in;
+
+        .center-horisontal();
+
+        &:first-child {
+            position: relative;
+        }
+
+        &.selected {
+            opacity: 1;
+        }
+    }
+}
+
+.spinner {
+        position: relative;
+        text-align: center;
+
+        svg {
+            max-width: 120px;
+
+            -webkit-animation-name: rotate360;
+            animation-name: rotate360;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+
+        .load-text {
+            display: block;
+        }
+    }

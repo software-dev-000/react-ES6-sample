@@ -1,0 +1,147 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <style>
+            body {
+                font-family: 'Lato', sans-serif;
+                font-size: 13px;
+            }
+
+            .list-group-item-passed {
+                background-color: #dff0d8;
+                color: #3c763d;
+            }
+
+            a.list-group-item-passed { color: #3c763d; }
+
+            a.list-group-item-passed .list-group-item-heading { color: inherit; }
+
+            a.list-group-item-passed:hover,
+            a.list-group-item-passed:focus {
+                background-color: #d0e9c6;
+                color: #3c763d;
+            }
+
+            a.list-group-item-passed.active,
+            a.list-group-item-passed.active:hover,
+            a.list-group-item-passed.active:focus {
+                background-color: #3c763d;
+                border-color: #3c763d;
+                color: #fff;
+            }
+
+            .list-group-item-failed {
+                background-color: #f2dede;
+                color: #a94442;
+            }
+
+            a.list-group-item-failed { color: #a94442; }
+
+            a.list-group-item-failed .list-group-item-heading { color: inherit; }
+
+            a.list-group-item-failed:hover,
+            a.list-group-item-failed:focus {
+                background-color: #ebcccc;
+                color: #a94442;
+            }
+
+            a.list-group-item-failed.active,
+            a.list-group-item-failed.active:hover,
+            a.list-group-item-failed.active:focus {
+                background-color: #a94442;
+                border-color: #a94442;
+                color: #fff;
+            }
+        </style>
+      
+    </head>
+
+    <body id="HTMLReporter" class="html-reporter{{#results.hasFailed}} showDetails{{/results.hasFailed}}">
+        
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">{{browserName}}</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+              
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="jumbotron">
+            {{#results}}
+            {{#hasFailed}}
+            <div class="alert alert-danger" role="alert">
+                Failed {{failed}} specs
+                <div>
+                    {{total}} specs| {{failed}} failing
+                </div>
+            </div>
+            {{/hasFailed}}
+            {{^hasFailed}}
+            {{#hasSuccess}}
+            <div class="alert alert-success" role="alert">
+                Passing {{success}} specs
+            </div>
+            {{/hasSuccess}}
+            {{/hasFailed}}
+            {{/results}}
+        </div>
+        <div class="jumbotron results">
+            <div class="summary">
+
+                <ul class="list-group">
+                    {{#suites}}
+                    <li class="list-group-item-heading list-group-item">
+                        <h3>{{name}}</h3>
+                        <ul class="list-group">
+                            {{#specs}}
+                            <li class="list-group-item list-group-item-{{state}}">
+                                {{description}}
+                            </li>
+                            {{/specs}}
+                        </ul>
+                    </li>
+                    {{/suites}}
+                </ul>
+            </div>
+
+        <div id="details">
+            {{#failedSuites}}
+            <ul class="list-group">
+                {{#specs}}
+                <li class="list-group-item list-group-item-{{state}}">
+                    <h3>{{name}} <em>{{description}}</em></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">{{log}}</li>
+                    </ul>
+                </li>
+                {{/specs}}
+            </ul>
+            {{/failedSuites}}
+        </div>
+            </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script>
+            $(function() {
+                $("a.summaryMenuItem").on("click", function() {
+                    $("body").removeClass("showDetails").addClass("showSummary");
+                });
+                $("a.detailsMenuItem").on("click", function() {
+                    $("body").addClass("showDetails").removeClass("showSummary");
+                });
+
+            });
+        </script>
+    </body>
+</html>

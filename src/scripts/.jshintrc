@@ -1,0 +1,19 @@
+{
+    "unused": true,
+    "strict": true,
+    "browser": true,
+    "devel": false,
+    "node": false,
+    "curly": true,
+    "camelcase": true,
+    "immed": true,
+    "expr": true,
+    "globals": {
+        "angular": true,
+        "document": true,
+        "describe": true,
+        "it": true,
+        "expect": true,
+        "console": false
+    }
+}
