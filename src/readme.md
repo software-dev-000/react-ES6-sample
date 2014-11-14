@@ -1,5 +1,8 @@
 ﻿# ReactES6
 
+A web project for working with react js in es6
+uses gulp and browser-sync for frontend building, 6to5 for es6 support
+
 Install:
 ---------
 1. Setup IIS Site
@@ -23,10 +26,12 @@ Install:
 6. Install growl
 	http://www.growlforwindows.com/gfw/
 
+7. Build solution in Visual Studio
+
 Development:
 ----------
 After install, reopen the sln, and the task "serve" should start automatically.
-Otherwise you can run it manually from the taskrunner.
+Otherwise you can run it manually from the taskrunner or powershell (cd to src and run "gulp serve")
 
 Karma:
 ----------

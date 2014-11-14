@@ -369,7 +369,6 @@
     <Content Include="scripts\svgdata.json" />
     <Content Include="scripts\partdata.json" />
     <Content Include="content\less\sidebar.less" />
-    <None Include="_references.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
