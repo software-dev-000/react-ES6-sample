@@ -1,8 +1,8 @@
 {
-  "description": "angular tdd project to teach basics and karma testing",
+  "description": "react js web project to explore es6 in react.js context",
   "repository": {
     "type": "git",
-    "url": "http://github.com/kasperstorgaard/ReactES6"
+    "url": "http://github.com/kasperstorgaard/React-ES6"
   },
   "devDependencies": {
     "browser-sync": "^1.5.6",
