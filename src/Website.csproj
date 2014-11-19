@@ -94,12 +94,27 @@
     <Content Include="content\images\brushed_%402X.png" />
     <Content Include="content\images\logo.svg" />
     <Content Include="gulpfile.js" />
-    <Content Include="scripts\test\config\karma.conf.js" />
-    <Content Include="scripts\.jshintignore" />
-    <Content Include="scripts\.jshintrc" />
-    <Content Include="scripts\vendor\react\react-0.12.0.js" />
-    <None Include="scripts\vendor\react\react-0.13.0-alpha.js.disabled" />
-    <Content Include="scripts\website\components\jumbotron.js" />
+    <Content Include="gulp\_browserify.js" />
+    <Content Include="gulp\_browsersync.js" />
+    <Content Include="gulp\_js.js" />
+    <Content Include="gulp\_less.js" />
+    <Content Include="gulp\_karma.js" />
+    <Content Include="gulp\_views.js" />
+    <Content Include="gulpconfig.json" />
+    <None Include="js\index.es6" />
+    <Content Include="js\lib\components\alert.js" />
+    <Content Include="js\lib\components\base.js" />
+    <Content Include="js\lib\components\index.js" />
+    <Content Include="js\lib\components\jumbotron.js" />
+    <Content Include="js\src\components\base.es6" />
+    <None Include="js\src\components\index.es6" />
+    <Content Include="js\src\components\alert.es6" />
+    <None Include="js\src\components\jumbotron.es6" />
+    <Content Include="js\web\web.js" />
+    <None Include="js\web\web.es6" />
+    <Content Include="tests\js\config\karma.conf.js" />
+    <Content Include="js\.jshintignore" />
+    <Content Include="js\.jshintrc" />
     <Content Include="views\layouts\_main.cshtml" />
     <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
@@ -246,8 +261,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\test\config\jasmine_template.html" />
-    <Content Include="Scripts\vendor\lodash\lodash.js" />
+    <Content Include="tests\js\config\jasmine_template.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -255,12 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\css\" />
-    <Folder Include="scripts\notifications\" />
-    <Folder Include="scripts\reports\jshint\" />
-    <Folder Include="scripts\reports\plato\" />
-    <Folder Include="scripts\website\configs\" />
-    <Folder Include="tasks\" />
-    <Folder Include="views\sections\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

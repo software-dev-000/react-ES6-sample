@@ -30,11 +30,8 @@
             </div>
         </div>
     </div>
-    <div id="main" class="container">
-        @RenderBody()
-    </div>
-    <script src="/Scripts/vendor.min.js"></script>
-    <script src="/Scripts/main.min.js"></script>
+    @RenderBody()
+    <script src="/js/web/web-bundle.js"></script>
     <script type='text/javascript'>        //<![CDATA[document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.5.6.js'><\/script>".replace(/HOSTg, location.hostname).replace(/PORT/g, location.port));//]]></script>
 </body>
 </html>

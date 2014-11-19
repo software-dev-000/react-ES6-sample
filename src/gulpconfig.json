@@ -1,0 +1,31 @@
+﻿{
+    "env": {
+        "dev": true,
+        "prod": false
+    },
+    "projectTitle":  "React ES6",
+    "browserify":  {
+        "src":  "./js/web/web.js",
+        "dest":  "js/web/",
+        "updateMsg":  "js {0}",
+        "watchFiles":  ["js/src/**/*.es6", "js/web/web.es6", "js/index.es6"]
+    },
+    "js":  {
+        "src":  ["js/src/**/*.es6", "js/web/web.es6", "js/index.es6"],
+        "dest":  ["js/lib", "js/web", "js"]
+    },
+    "karma":  {
+        "configFile": "tests/js/config/karma.conf.js"
+    },
+    "less":  {
+        "src": "content/less/main.less",
+        "dest":  "content/css",
+        "updateMsg":  "less {0}",
+        "watchFiles":  "content/less/**/*.less"
+    },
+    "views": {
+        "src": "views/**/*.cshtml",
+        "updateMsg":  "views {0}",
+        "watchFiles": ["views/**/*.cshtml", "Default.cshmlt"]
+    }
+}
