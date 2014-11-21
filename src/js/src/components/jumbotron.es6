@@ -1,7 +1,7 @@
 ﻿const React = require('react');
-import {BaseComponent} from './base.js';
+import {Reactifyable} from './base/reactifyable.js';
 
-class _Jumbotron extends BaseComponent {
+class _Jumbotron extends Reactifyable {
     render() {
         return (<div className="jumbotron"><h1>{this.props.headline}</h1></div>);
     }

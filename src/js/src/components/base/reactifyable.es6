@@ -1,4 +1,4 @@
-﻿class _BaseComponent {
+﻿class _Reactifyable {
     reactifyClass(){
         let o = {};
         let self = this;
@@ -12,4 +12,4 @@
     }
 }
 
-export const BaseComponent = _BaseComponent;
+export const Reactifyable = _Reactifyable;

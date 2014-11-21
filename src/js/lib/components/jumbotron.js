@@ -18,13 +18,13 @@ var _extends = function (child, parent) {
 };
 
 var React = require("react");
-var BaseComponent = require('./base.js').BaseComponent;
-var _Jumbotron = (function (BaseComponent) {
+var Reactifyable = require('./base/reactifyable.js').Reactifyable;
+var _Jumbotron = (function (Reactifyable) {
   var _Jumbotron = function _Jumbotron() {
-    BaseComponent.apply(this, arguments);
+    Reactifyable.apply(this, arguments);
   };
 
-  _extends(_Jumbotron, BaseComponent);
+  _extends(_Jumbotron, Reactifyable);
 
   _classProps(_Jumbotron, null, {
     render: {
@@ -36,6 +36,6 @@ var _Jumbotron = (function (BaseComponent) {
   });
 
   return _Jumbotron;
-})(BaseComponent);
+})(Reactifyable);
 
 var Jumbotron = exports.Jumbotron = React.createClass(_Jumbotron.prototype.reactifyClass());
